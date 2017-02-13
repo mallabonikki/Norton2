@@ -1,0 +1,8 @@
+D:\C#\Norton2\bin\Debug\Norton2.exe
+D:\C#\Norton2\bin\Debug\Norton2.pdb
+D:\C#\Norton2\obj\Debug\Norton2.exe
+D:\C#\Norton2\obj\Debug\Norton2.pdb
+D:\C#\Norton2\obj\Debug\Norton2.ProjectInstaller.resources
+D:\C#\Norton2\obj\Debug\Norton2.csproj.GenerateResource.Cache
+D:\C#\Norton2\obj\Debug\Norton2.Service1.resources
+D:\C#\Norton2\obj\Debug\Norton2.csprojResolveAssemblyReference.cache
