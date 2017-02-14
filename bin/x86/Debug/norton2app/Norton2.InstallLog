@@ -1,0 +1,71 @@
+﻿Uninstalling assembly 'D:\Working Folder\Norton2\bin\x86\Debug\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Working Folder\Norton2\bin\x86\Debug\Norton2.InstallLog
+   assemblypath = D:\Working Folder\Norton2\bin\x86\Debug\Norton2.exe
+Removing EventLog source Service1.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe
+Removing EventLog source Service1.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe
+Uninstalling assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\Norton2.exe
+Removing EventLog source Service1.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.exe
+Installing service Service1...
+Creating EventLog source Service1 in log Application...
+Rolling back assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.exe
+Restoring event log to previous state for source Service1.
+Uninstalling assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\Norton2.exe
+Removing EventLog source Service1.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\norton2.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\norton2.InstallLog
+   assemblypath = C:\Users\malla\Dropbox\Norton2\bin\x86\Debug\norton2app\norton2.exe
+Removing EventLog source Service1.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.

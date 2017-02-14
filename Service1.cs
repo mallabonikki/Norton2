@@ -29,12 +29,9 @@ namespace Norton2
             tmrShutdown.Enabled = true;
         }
 
-        [Conditional("DEBUG")]
-        static void DebugMode()
+        public void OnDebug()
         {
-            if (!Debugger.IsAttached) Debugger.Launch();
-
-            Debugger.Break();
+            OnStart(null);
         }
 
         private void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -103,26 +100,11 @@ namespace Norton2
         //}
 
         protected override void OnStart(string[] args)
-        { 
-            //DebugMode();
-            //BackgroundWorker bw = new BackgroundWorker();
-            //bw.DoWork += new DoWorkEventHandler(bw_DoWork);
-            //bw.RunWorkerAsync();
-
+        {
             tmrShutdown.Start();
         }
 
-        //private void bw_DoWork(object sender, DoWorkEventArgs e)
-        //{
-        //    Process p = new Process();
-        //    p.StartInfo = new ProcessStartInfo("C:\\Token\\Token Timer v4.exe");
-        //    p.Start();
-        //    p.WaitForExit();
-        //    base.Stop();
-        //}
-
         protected override void OnStop()
-        //DebugMode();
         {   //stoping service while token timer is running. computr will shutdown
             //Process[] pname = Process.GetProcessesByName("Token Timer v4");
 
