@@ -36,5 +36,11 @@ C:\Users\malla\Dropbox\Norton2\obj\x86\Debug\Norton2.Service1.resources
 C:\Users\malla\Dropbox\Norton2\obj\x86\Debug\Norton2.csproj.GenerateResource.Cache
 C:\Users\malla\Dropbox\Norton2\obj\x86\Debug\Norton2.exe
 C:\Users\malla\Dropbox\Norton2\obj\x86\Debug\Norton2.pdb
+D:\Dropbox\Norton2\bin\x86\Debug\Norton2.exe
+D:\Dropbox\Norton2\bin\x86\Debug\Norton2.pdb
+D:\Dropbox\Norton2\obj\x86\Debug\Norton2.ProjectInstaller.resources
+D:\Dropbox\Norton2\obj\x86\Debug\Norton2.Service1.resources
+D:\Dropbox\Norton2\obj\x86\Debug\Norton2.csproj.GenerateResource.Cache
 D:\Dropbox\Norton2\obj\x86\Debug\Norton2.exe
 D:\Dropbox\Norton2\obj\x86\Debug\Norton2.pdb
+D:\Dropbox\Norton2\obj\x86\Debug\Norton2.csprojResolveAssemblyReference.cache

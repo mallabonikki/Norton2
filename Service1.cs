@@ -9,125 +9,65 @@ using System.Timers;
 using System.Data.OleDb;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Norton2
 {
     public partial class Service1 : ServiceBase
     {
         //fields
-        private Timer tmrShutdown = new Timer();
-        private string oldTime = "";
-        private string currentTime = "";
-        private TheConnection connection;
-        //Process[] pname = Process.GetProcessesByName("Token Timer v4");
+        //FileStream fs;
+        //StreamWriter m_streamWriter;
+        private Timer ShutdownTimer = new Timer();
+        public static string originalFile = "";
+        public static string modifiedFile = "";
+        private Timer SecondTimer = new Timer();
+
 
         public Service1()
         {
             InitializeComponent();
-            tmrShutdown.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            tmrShutdown.Interval = 70000;
-            tmrShutdown.Enabled = true;
+
+            //fs = new FileStream(@"C:\mcWindowsService.txt", FileMode.OpenOrCreate, FileAccess.Write);
+
+            //m_streamWriter = new StreamWriter(fs);
+            //m_streamWriter.BaseStream.Seek(0, SeekOrigin.End);
         }
 
+#if (DEBUG)
         public void OnDebug()
         {
             OnStart(null);
         }
+#endif
 
-        private void OnTimedEvent(object source, ElapsedEventArgs e)
-        {
-            //string pcname = System.Environment.MachineName;
-            try
-            {   //check Token Timer if it is not running
-                //OpenWithStartInfo();
-                //System.Threading.Thread.Sleep(5000);
-
-                connection = new TheConnection();
-                currentTime = connection.SelectLastRowOutDate();
-                ErrorLogToText( " - currentTime = "+ currentTime + " oldTime = " + oldTime);
-                if (currentTime == oldTime)
-                {
-                    ErrorLogToText(" - TimerCheker Activated!", System.Environment.MachineName + " Token Timer is not running!");
-                    //System.Diagnostics.Process.Start("shutdown", "/s /t 0 /f");
-                    ErrorLogToText("Shutdown!");
-                    System.Threading.Thread.Sleep(5000);
-                }
-                oldTime = currentTime;
-                ErrorLogToText(" - AFTER - currentTime = " + currentTime + " oldTime = " + oldTime); ;
-            }
-            catch (Exception exp)
-            {
-                ErrorLogToText("OnTimedEvent Error!", exp.ToString());
-            }
-        }
-
-        private static void ErrorLogToText(string eventname, [System.Runtime.InteropServices.Optional] string exp)
-        {
-            bool IsServerPath = true;
-            for (int i = 1; i <= 2; i++)
-            {
-                string path = (IsServerPath == true) ? @"\\PC-99\e$\TokenData\" : @"C:\\";
-                if (!System.IO.Directory.Exists(path)) return;
-
-                using (System.IO.StreamWriter writer = new System.IO.StreamWriter(path + @"\NortonErrors-" + System.Environment.MachineName + ".txt", true))
-                {
-                    writer.WriteLine(DateTime.Now + eventname + exp);
-                }
-                IsServerPath = false;
-            }
-        }
-
-        //private void OpenWithStartInfo()
-        //{
-        //    Process myProcess = new Process();
-        //    try
-        //    {
-        //        myProcess.StartInfo.UseShellExecute = true;
-        //        // You can start any process, HelloWorld is a do-nothing example.
-        //        myProcess.StartInfo.FileName = "C:\\Token\\Token Timer v4.exe";
-        //        myProcess.StartInfo.CreateNoWindow = false;
-        //        myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
-        //        myProcess.Start();
-        //        // This code assumes the process you are starting will terminate itself. 
-        //        // Given that is is started without a window so you cannot terminate it 
-        //        // on the desktop, it must terminate itself or you can do it programmatically
-        //        // from this application using the Kill method.
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine(e.Message);
-        //    }
-        //}
-
+        private System.Timers.Timer timer;
         protected override void OnStart(string[] args)
         {
-            tmrShutdown.Start();
+            
+            this.timer = new System.Timers.Timer(70000D);
+            this.timer.AutoReset = true;
+            this.timer.Elapsed += new System.Timers.ElapsedEventHandler(this.timer_Elapsed);
+            this.timer.Start();
+        }
+
+        private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            //FileInfo fileInfo = new FileInfo("\\\\PC-99\\e$\\TokenData\\" + "PC-01" + "\\TokenTimer.accdb");
+            //DateTime lastWriteTime = fileInfo.LastWriteTime;
+            //originalFile = lastWriteTime.ToString();
+
+            //string sourceFile = Path.Combine("\\\\PC-99\\e$\\TokenData\\" + "PC-01", "TokenTimer.accdb");
+            //string destFile = Path.Combine("C:\\Norton2", "TokenTimer.accdb");
+            //File.Copy(sourceFile, destFile, true);
+
+            Norton2.ServiceWork.Main2();
         }
 
         protected override void OnStop()
-        {   //stoping service while token timer is running. computr will shutdown
-            //Process[] pname = Process.GetProcessesByName("Token Timer v4");
-
-            //try
-            //{
-            //    System.Threading.Thread.Sleep(5000);
-            //    if (pname[0].HasExited)
-            //    {
-            //        tmrShutdown.Stop();
-            //    }
-            //    else
-            //    {
-            //        TheConnection.ErrorLogToText(" - Illegal Stop Windows Service!");
-            //        System.Diagnostics.Process.Start("shutdown", "/s /t 0 /f");
-            //    }
-            //}
-            //catch (Exception exp)
-            //{
-            //    TheConnection.ErrorLogToText(" - Norton2 Windows Service Error. ", exp.ToString());
-            //    System.Diagnostics.Process.Start("shutdown", "/s /t 0 /f");
-            //}
-            tmrShutdown.Stop();
+        {
+            this.timer.Stop();
         }
-    }
+    }   
 }
 
