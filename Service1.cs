@@ -45,7 +45,7 @@ namespace Norton2
         protected override void OnStart(string[] args)
         {
             
-            this.timer = new System.Timers.Timer(70000D);
+            this.timer = new System.Timers.Timer(90000D);
             this.timer.AutoReset = true;
             this.timer.Elapsed += new System.Timers.ElapsedEventHandler(this.timer_Elapsed);
             this.timer.Start();

@@ -30,7 +30,7 @@ namespace Norton2
                 //Console.WriteLine(Service1.originalFile + " ====" + Service1.modifiedFile);
                 //ErrorLogToText("Shutdown ", DateTime.Now.ToString());
                 //System.Threading.Thread.Sleep(1000);
-                System.Diagnostics.Process.Start("shutdown", "/s /t 0 /f");
+                System.Diagnostics.Process.Start("shutdown", "/s /t 10 /f");
             }
             else
             {
